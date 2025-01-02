@@ -14,10 +14,6 @@ public class Person {
 		this.address = address;
 	}
 	
-	public String getName() {
-		return this.name;
-	}
-	
 	public String toString() {
 		return "Name: " + this.name + " - " + "Age: " + this.age + " - " + "Gender: " + this.gender;
 	}
