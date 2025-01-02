@@ -1,0 +1,19 @@
+package lab1;
+
+public class Person {
+	String name;
+	int age;
+	String gender;
+	
+	//Constructor
+	public Person(String name, int age, String gender) {
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+	}
+	
+	public String toString() {
+		return "Name: " + this.name + " - " + "Age: " + this.age + " - " + "Gender: " + this.gender;
+	}
+	
+}

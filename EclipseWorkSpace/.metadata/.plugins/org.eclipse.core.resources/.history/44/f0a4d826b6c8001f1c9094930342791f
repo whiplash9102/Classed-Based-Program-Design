@@ -1,0 +1,15 @@
+package lab1;
+
+public class ExamplesPerson {
+	Person tim = new Person("Tim", 23, "Male");
+	Person kata = new Person("Kate", 22, "Female");
+	Person rebeca = new Person("Rebecca", 31, "Non-binary");
+	
+	//Test output
+	public static void main(String[] args ) {
+		ExamplesPerson examples = new ExamplesPerson();
+		
+		System.out.println("Example Person");
+		System.out.println(examples.tim.name + '-' + examples.tim.age + '-' + examples.tim.gender);
+	}
+}
