@@ -1,0 +1,42 @@
+package lab4;
+
+public class Square implements IShape {
+	int x;
+	int y;
+	int size;
+	String color;
+	
+	Square(int x, int y, int size, String color) {
+		this.x = x;
+		this.y = y;
+		this.size = size;
+		this.color = color;
+	}
+	
+	
+	@Override
+	public double area() {
+		// Calculate the area of the square
+		return this.size * this.size;
+	}
+
+	@Override
+	public double distanceToOrigin() {
+		// TODO Auto-generated method stub
+		return Math.sqrt(this.x * this.x + this.y * this.y);
+				// Calculate the area of the square
+	}
+
+	@Override
+	public IShape grow(int inc) {
+		// Return a new square with an increased size
+		return new Square(this.x, this.y, this.size + inc, this.color);
+	}
+
+	@Override
+	public boolean isBiggerThan(IShape that) {
+		// Compare the areas of the two shapes
+		return this.area() > that.area();
+	}
+
+}

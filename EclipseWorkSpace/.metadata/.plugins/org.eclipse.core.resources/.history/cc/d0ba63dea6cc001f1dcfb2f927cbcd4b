@@ -1,0 +1,98 @@
+package lab3;
+
+// Interface for geometric shapes
+interface IShape {
+    // to compute the area of this shape
+    double area();
+
+    // to compute the distance from this shape to the origin
+    double distanceToOrigin();
+
+    // to increase the size of this shape by the given increment
+    IShape grow(int inc);
+
+    // is the area of this shape bigger than the area of the given shape?
+    boolean isBiggerThan(IShape that);
+}
+
+// to represent a Circle
+class Circle implements IShape {
+    int x; // x-coordinate of the center
+    int y; // y-coordinate of the center
+    int radius; // radius of the circle
+    String color;
+
+    Circle(int x, int y, int radius, String color) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+    }
+
+    public double area() {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    public double distanceToOrigin() {
+        return Math.sqrt(this.x * this.x + this.y * this.y) - this.radius;
+    }
+
+    public IShape grow(int inc) {
+        return new Circle(this.x, this.y, this.radius + inc, this.color);
+    }
+
+    public boolean isBiggerThan(IShape that) {
+        return this.area() > that.area();
+    }
+}
+
+// to represent a Square
+class Square implements IShape {
+    int x; // x-coordinate of the top-left corner
+    int y; // y-coordinate of the top-left corner
+    int size; // length of one side
+    String color;
+
+    Square(int x, int y, int size, String color) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.color = color;
+    }
+
+    public double area() {
+        return this.size * this.size;
+    }
+
+    public double distanceToOrigin() {
+        double centerX = this.x + this.size / 2.0;
+        double centerY = this.y + this.size / 2.0;
+        return Math.sqrt(centerX * centerX + centerY * centerY);
+    }
+
+    public IShape grow(int inc) {
+        return new Square(this.x, this.y, this.size + inc, this.color);
+    }
+
+    public boolean isBiggerThan(IShape that) {
+        return this.area() > that.area();
+    }
+}
+
+// Example Shapes and Tester
+import tester.Tester;
+
+class ExamplesShapes {
+    ExamplesShapes() {}
+
+    IShape c1 = new Circle(50, 50, 10, "red");
+    IShape s1 = new Square(50, 50, 30, "red");
+
+    // test the method area in the classes that implement IShape
+    boolean testIShapeArea(Tester t) {
+        return t.checkInexact(this.c1.area(), 314.15, 0.01) &&
+               t.checkInexact(this.s1.area(), 900.0, 0.01);
+    }
+
+    // test the method distanceToOrigin
+    boolean test

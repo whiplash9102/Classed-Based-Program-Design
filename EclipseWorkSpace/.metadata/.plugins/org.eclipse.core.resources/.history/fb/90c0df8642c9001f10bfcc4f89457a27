@@ -1,0 +1,47 @@
+import tester.*;
+
+public class Book {
+	String title;
+	Author author;
+	int price;
+	
+	Book(String title, Author author, int price){
+		this.title = title;
+		this.author = author;
+		this.price = price;
+	}
+	
+	boolean sameAuthor(Book that) {
+		return this.author.name.equals(that.author.name) && this.author.yob == that.author.yob;
+				}
+
+class Author {
+	String name;
+	int yob;
+	
+	Author(String name, int yob) {
+		this.name = name;
+		this.yob = yob; 
+	}
+}
+	
+	
+class ExamplesBooksAuthors {
+
+		//Examples of authors
+		Author pat = new Author("Pat Conroy", 1948);
+		Author dan = new Author("Dan Brown", 1962);
+		
+		//Examples of books
+		Book beaches = new Book("Beaches", this.pat, 20);
+		Book prince = new Book("Prince of Tides", this.pat, 15);
+		Book code = new Book("Da Vinci code", this.dan, 20);
+		
+		
+		//Test case down here
+		boolean testSameBookAuthor(Tester t) {
+			return t.checkExpect(this.beaches.sameAuthor(this.prince), false)
+			&& t.checkExpect(this.beaches.sameAuthor(this.code), false);
+		}
+	}
+}

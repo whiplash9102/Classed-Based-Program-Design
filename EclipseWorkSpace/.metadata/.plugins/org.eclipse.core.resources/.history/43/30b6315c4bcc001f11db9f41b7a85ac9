@@ -1,0 +1,105 @@
+package lab3;
+import tester.*;
+
+public class Circle implements IShape{
+	int x;
+	int y;
+	int radius;
+	String color;
+	
+	
+  Circle(int x, int y, int radius, String color) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+    this.color = color;
+    }
+  public double area() {
+  	return Math.PI * this.radius * this.radius;
+  }
+  
+  public double distanceToOrigin() {
+  	return Math.sqrt(this.x * this.x + this.y * this.y) - this.radius;
+ }
+  // to increase the size of this shape by the given increment
+  public IShape grow(int inc) {
+  	return new Circle(this.x, this.y, this.radius + inc, this.color);
+  }
+  
+  // is the area of this shape bigger than the area of the given shape
+  public boolean isBiggerThan(IShape that) {
+  	return this.area() > that.area();
+  }
+}
+
+class Square implements IShape {
+	int x; // represents the top-left corner of the square
+	int y;
+	int size;
+	String color;
+
+	
+	Square(int x, int y, int size, String color) {
+	    this.x = x;
+	    this.y = y;
+	    this.size = size;
+	    this.color = color;
+	  }
+	 
+
+	  public double area() {
+	    return this.size * this.size;
+	  }
+
+
+		@Override
+		public double distanceToOrigin() {
+			double centerX = this.x + this.size / 2.0;
+			double centerY = this.y + this.size / 2.0;
+			return Math.sqrt(centerX * centerX + centerY * centerY);
+		}
+		@Override
+		public IShape grow(int inc) {
+			return new Square(this.x, this.y, this.size + inc, this.color);
+		}
+
+		@Override
+		public boolean isBiggerThan(IShape that) {
+			return this.area() > that.area();		
+			}
+}
+
+class ExamplesShapess {
+	ExamplesShapess() {}
+	 
+	 	IShape c1 = new Circle(50, 50, 10, "red");
+	  IShape s1 = new Square(50, 50, 30, "red");
+	 
+	  // test the method area in the classes that implement IShape
+	  boolean testIShapeArea(Tester t) {
+	    return
+	      t.checkInexact(this.c1.area(), 314.15, 0.01) &&
+	      t.checkInexact(this.s1.area(), 900.0, 0.01);
+	  }
+
+	  // test the method distanceToOrigin
+	  boolean testDistanceToOrigin(Tester t) {
+	    return
+	      t.checkInexact(this.c1.distanceToOrigin(), 50.71, 0.01) &&
+	      t.checkInexact(this.s1.distanceToOrigin(), 85.36, 0.01);
+	  }
+
+	  // test the method grow
+	  boolean testGrow(Tester t) {
+	    return
+	      t.checkExpect(this.c1.grow(5).area(), new Circle(50, 50, 15, "red").area()) &&
+	      t.checkExpect(this.s1.grow(10).area(), new Square(50, 50, 40, "red").area());
+	  }
+
+	  // test the method isBiggerThan
+	  boolean testIsBiggerThan(Tester t) {
+	    return
+	      t.checkExpect(this.c1.isBiggerThan(this.s1), false) &&
+	      t.checkExpect(this.s1.isBiggerThan(this.c1), true);
+	  }
+	}

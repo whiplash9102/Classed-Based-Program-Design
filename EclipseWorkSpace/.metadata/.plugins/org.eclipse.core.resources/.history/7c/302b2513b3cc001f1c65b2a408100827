@@ -1,0 +1,12 @@
+package lab3;
+import tester.*;
+
+public class ExamplesShape {
+	  ExamplesShape() {}
+	  IShape c1 = new Circle(50, 50, 10, "red");
+	  
+	  boolean testIShapeArea(Tester t) {
+	  	return
+	  			t.checkInexact(this.c1.area(), 314.15, 0.01);
+	  }
+}

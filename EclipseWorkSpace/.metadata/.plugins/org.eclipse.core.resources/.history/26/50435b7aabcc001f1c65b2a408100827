@@ -1,0 +1,7 @@
+package lab3;
+
+interface IShape {
+// to compute the area of this shape
+double area();
+// We'll add more methods later
+}
