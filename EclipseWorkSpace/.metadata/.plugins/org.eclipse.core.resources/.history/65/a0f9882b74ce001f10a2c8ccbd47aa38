@@ -1,10 +1,12 @@
 public class Circle implements IShape {
-	CartPt center;
+	int x; //Represent the center of the circle
+	int y;
 	int radius;
 	String color;
 	
-	Circle(CartPt center ,int radius, String color){
-		this.center = center;
+	Circle(int x, int y, int radius, String color){
+		this.x = x;
+		this.y = y;
 		this.radius = radius;
 		this.color = color;
 	}
@@ -14,21 +16,16 @@ public class Circle implements IShape {
 	}
 	//distance from the origin
 	public double distanceToOrigin() {
-		return this.center.distanceToOrigin() - this.radius;
+		return Math.sqrt(this.x * this.x + this.y* this.y) - this.radius;
 	}
 	// increase the size of circle with given radius
 	public IShape grow(int inc) {
 		// create new circle with an increase radius
-		return new Circle(this.center, this.radius + inc, this.color);
+		return new Circle(this.x, this.y, this.radius + inc, this.color);
 	}
 	
 	public boolean isBiggerThan(IShape that) {
 		return this.area() > that.area();
-	}
-	
-	public boolean contains(CartPt point) {
-		double distance = Math.sqrt(Math.pow(point.x - this.center.x, 2) + Math.pow(point.y - this.center.y, 2));
-    return distance <= this.radius;
 	}
 
 }

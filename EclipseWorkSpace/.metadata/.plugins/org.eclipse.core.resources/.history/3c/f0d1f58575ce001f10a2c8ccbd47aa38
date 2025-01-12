@@ -1,12 +1,14 @@
 
 
 public class Square implements IShape {
-	CartPt topLeft;
+	int x;
+	int y;
 	int size;
 	String color;
 	
-	Square(CartPt topLeft, int size, String color) {
-		this.topLeft = topLeft;
+	Square(int x, int y, int size, String color) {
+		this.x = x;
+		this.y = y;
 		this.size = size;
 		this.color = color;
 	}
@@ -21,14 +23,14 @@ public class Square implements IShape {
 	@Override
 	public double distanceToOrigin() {
 		// TODO Auto-generated method stub
-		return this.topLeft.distanceToOrigin();
+		return Math.sqrt(this.x * this.x + this.y * this.y);
 				// Calculate the area of the square
 	}
 
 	@Override
 	public IShape grow(int inc) {
 		// Return a new square with an increased size
-		return new Circle(this.topLeft, this.size + inc, this.color);
+		return new Square(this.x, this.y, this.size + inc, this.color);
 	}
 
 	@Override
@@ -36,14 +38,5 @@ public class Square implements IShape {
 		// Compare the areas of the two shapes
 		return this.area() > that.area();
 	}
-	
-	@Override
-	public boolean contains(CartPt point) {
-	    return point.x >= this.topLeft.x &&
-	           point.x <= (this.topLeft.x + this.size) &&
-	           point.y >= this.topLeft.y &&
-	           point.y <= (this.topLeft.y + this.size);
-	}
-
 
 }

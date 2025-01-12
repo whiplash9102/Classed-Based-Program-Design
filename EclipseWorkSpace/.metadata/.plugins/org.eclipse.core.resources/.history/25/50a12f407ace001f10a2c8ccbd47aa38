@@ -22,4 +22,9 @@ public class ExamplesShapes {
 	boolean testCircleGrow(Tester t) {
 		return t.checkExpect(this.c1.grow(20), this.c2);
 	}
+
+	// test the method grow in the class Square
+	boolean testSquareGrow(Tester t) {
+		return t.checkExpect(this.s1.grow(20), this.s2);
+	}
 }

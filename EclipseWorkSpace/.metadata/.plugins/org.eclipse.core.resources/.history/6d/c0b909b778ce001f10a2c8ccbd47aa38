@@ -14,5 +14,4 @@ public interface IShape {
 	//is the area of this shape bigger than the area of the given shape?
 	boolean isBiggerThan(IShape that);
 	
-	boolean contains(CartPt point); 	
 }
