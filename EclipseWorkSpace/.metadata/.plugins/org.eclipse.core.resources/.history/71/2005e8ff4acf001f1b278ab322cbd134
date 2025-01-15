@@ -1,0 +1,17 @@
+package lab5;
+
+public interface ILoBook {
+	// count the number of the books in the list
+	int count();
+	
+	// produce the list of all book published before the given date
+	// from this list of books
+	ILoBook allBefore(int year);
+	
+	// calculate the total sale price of all books in this list for a given discount
+	double salePrice(int discount);
+	
+	// produce a list of a books in this list, sorted by their price
+	ILoBook sorByPrice();
+
+}
