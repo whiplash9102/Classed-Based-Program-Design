@@ -2,7 +2,7 @@
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/Lab1"/>
+        <listEntry value="/Lecture"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="4"/>
@@ -14,5 +14,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="tester.Main"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="Lab1"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="ExamplesBooks"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Lab1"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Lecture"/>
 </launchConfiguration>
