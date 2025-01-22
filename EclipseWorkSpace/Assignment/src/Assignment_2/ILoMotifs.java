@@ -1,4 +1,4 @@
-package lab8;
+package Assignment_2;
 
 public interface ILoMotifs {
 

@@ -9,7 +9,6 @@ INDEX VERSION 1.134+/Users/phamthanh/Desktop/CSP2510_SP22/EclipseWorkSpace/.meta
 1865797976.index
 1627655310.index
 2918582882.index
-3807503841.index
 2240036215.index
 2282608490.index
 739008796.index
