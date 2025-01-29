@@ -1,9 +1,0 @@
-package lab3;
-
-public interface IShape {
-	// to compute the area of this shape
-	double area();
-	// add more methods later
-}
-
-// represent a circl

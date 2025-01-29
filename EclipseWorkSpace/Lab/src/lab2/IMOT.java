@@ -1,5 +1,6 @@
 package lab2;
 
+
 import tester.*;
 
 public interface IMOT {

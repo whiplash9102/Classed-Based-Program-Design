@@ -1,4 +1,4 @@
-package lab3;
+
 
 import tester.Tester;
 
@@ -69,7 +69,7 @@ class Dog implements IPet {
 		}
 }
 
-class ExamplesPerson {
+class ExamplesPersoni{
   IPet whiskers = new Cat("Whiskers", "Tabby", true); // Lingered cat
   IPet mittens = new Cat("Mittens", "Siamese", false); // Short hair cat
   IPet rover = new Dog("Rover", "Golden Retriever", true); // Male dog

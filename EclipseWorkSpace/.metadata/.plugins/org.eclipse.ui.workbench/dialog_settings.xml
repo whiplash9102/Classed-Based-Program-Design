@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
@@ -19,6 +19,11 @@
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
 		<section name="ImportExportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="243"/>
+			<item key="DIALOG_Y_ORIGIN" value="216"/>
+			<item key="DIALOG_WIDTH" value="586"/>
+			<item key="DIALOG_HEIGHT" value="550"/>
+			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 		</section>
 	</section>
 	<section name="FileSystemImportWizard">
@@ -29,18 +34,36 @@
 			<item value="/Users/phamthanh/Desktop/CSP2510_SP22/DowloadedFiles"/>
 		</list>
 		<section name="FileSystemImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="165"/>
-			<item key="DIALOG_Y_ORIGIN" value="196"/>
+			<item key="DIALOG_X_ORIGIN" value="243"/>
+			<item key="DIALOG_Y_ORIGIN" value="216"/>
 			<item key="DIALOG_WIDTH" value="691"/>
 			<item key="DIALOG_HEIGHT" value="622"/>
 			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 		</section>
 	</section>
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="203"/>
-		<item key="DIALOG_Y_ORIGIN" value="-16"/>
+		<item key="DIALOG_X_ORIGIN" value="105"/>
+		<item key="DIALOG_Y_ORIGIN" value="-15"/>
 		<item key="DIALOG_WIDTH" value="734"/>
 		<item key="DIALOG_HEIGHT" value="1042"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_WIDTH" value="502"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_HEIGHT" value="439"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
+		<list key="orderedElements">
+			<item value="org.eclipse.debug.ui.DebugView"/>
+		</list>
+		<list key="orderedProviders">
+			<item value="org.eclipse.e4.ui.parts"/>
+		</list>
+		<list key="textEntries">
+			<item value="1"/>
+		</list>
+		<list key="textArray">
+			<item value="debug"/>
+		</list>
 	</section>
 </section>
