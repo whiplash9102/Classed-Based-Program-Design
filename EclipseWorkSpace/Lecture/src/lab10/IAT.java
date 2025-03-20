@@ -1,3 +1,4 @@
+package lab10;
 import tester.Tester;
 
 public interface IAT {

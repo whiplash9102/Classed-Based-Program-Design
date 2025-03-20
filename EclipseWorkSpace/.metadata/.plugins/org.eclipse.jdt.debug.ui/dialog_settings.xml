@@ -2,11 +2,11 @@
 <section name="Workbench">
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=Lab1/\/Users\/phamthanh\/Desktop\/CSP2510_SP22\/Eclipse.Jars\/tester.jar&amp;lt;tester(Printer.class[Printer&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Lab1/src&amp;lt;lab5{ExampleBooks.java[ExampleBooks&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Lab1/\/Users\/phamthanh\/Desktop\/CSP2510_SP22\/Eclipse.Jars\/tester.jar&amp;lt;tester(Main.class[Main&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Assignment/\/Users\/phamthanh\/Desktop\/CSP2510_SP22\/Eclipse.Jars\/tester.jar=/module=/true=/&amp;lt;tester(Main.class[Main&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=Lab1/\/Users\/phamthanh\/Desktop\/CSP2510_SP22\/Eclipse.Jars\/tester.jar&amp;lt;tester(Printer.class[Printer&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Lab1/src&amp;lt;lab5{ExampleBooks.java[ExampleBooks&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Lab1/\/Users\/phamthanh\/Desktop\/CSP2510_SP22\/Eclipse.Jars\/tester.jar&amp;lt;tester(Main.class[Main&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Lab/src&amp;lt;lab4{IBook.java[ExamplesBooks&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Lecture/\/Users\/phamthanh\/Desktop\/Learning Program\/CSP2510_SP22\/Eclipse.Jars\/tester.jar&amp;lt;tester(Main.class[Main&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
 		<section name="DialogBoundsSettings">
 			<item key="DIALOG_HEIGHT" value="500"/>
 			<item key="DIALOG_WIDTH" value="834"/>
-			<item key="DIALOG_X_ORIGIN" value="133"/>
+			<item key="DIALOG_X_ORIGIN" value="106"/>
 			<item key="DIALOG_Y_ORIGIN" value="0"/>
 			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 		</section>

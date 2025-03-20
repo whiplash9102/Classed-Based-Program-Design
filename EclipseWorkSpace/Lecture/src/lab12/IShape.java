@@ -1,3 +1,4 @@
+package lab12;
 import tester.*;
 
 public interface IShape {
@@ -6,6 +7,8 @@ public interface IShape {
 	boolean sameCircle(Circle that);
 	boolean sameSquare(Square that);
 	boolean sameRect(Rect that);
+	// New:
+	boolean sameCombo(Combo that);
 }
 
 abstract class AShape implements IShape {
@@ -16,6 +19,9 @@ abstract class AShape implements IShape {
 		return false;
 	}
 	public boolean sameSquare(Square that) {
+		return false;
+		}
+	public boolean sameCombo(Combo that) {
 		return false;
 	}
 }
@@ -76,6 +82,26 @@ class Square extends Rect {
 																																			// for Square
 	}
 }
+class Combo extends AShape {
+	IShape left;
+	IShape right;
+	
+	Combo(IShape left, IShape right){
+		this.left = left;
+		this.right = right;
+	}
+	
+	public boolean sameCombo(Combo that) {
+		return that.left == this.left && that.right == this.right; 
+	}
+
+	@Override
+	public boolean sameShape(IShape that) {
+		// TODO Auto-generated method stub
+		return that.sameCombo(this);
+	}
+	
+}
 
 class ExamplesShapes {
 	Circle c1 = new Circle(3, 4, 5);
@@ -88,7 +114,12 @@ class ExamplesShapes {
 	Square s1 = new Square(3, 4, 5);
 	Square s2 = new Square(4, 5, 6);
 	Square s3 = new Square(3, 4, 5);
-
+// In test method for Combo
+	Combo cb1 = new Combo(c1, c2);
+	Combo cb2 = new Combo(c2, s3);
+	Combo cb3 = new Combo(c1, c2);
+	
+	
 	boolean testSameShapeFun(Tester t) {
 		return t.checkExpect(c1.sameCircle(c2), false) &&
 				t.checkExpect(c1.sameCircle(c3), true) &&
@@ -97,7 +128,8 @@ class ExamplesShapes {
 				t.checkExpect(s1.sameShape(r1), false);
 	}
 	boolean testIShape(Tester t) {
-		return t.checkExpect(c1.sameShape(c3), true);
-		
+		return t.checkExpect(c1.sameShape(c3), true) &&
+				t.checkExpect(cb1.sameShape(cb2), false) &&
+				t.checkExpect(cb1.sameShape(cb3), true);
 	}
 }
