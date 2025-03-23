@@ -3,6 +3,8 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="contains"/>
+		<item value="containt"/>
 		<item value="getLeftMost"/>
 		<item value="JSONFind"/>
 		<item value="totalPrice"/>

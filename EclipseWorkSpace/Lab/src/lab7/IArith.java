@@ -1,7 +1,8 @@
+package lab7;
 
-
+import tester.*;
 public interface IArith {
-	<R> R accept(IArithVisitor<R> visitor);
+	<R> R accept (IArithVisitor<R> visitor);
 }
 
 class Const implements IArith { 
@@ -14,7 +15,7 @@ class Const implements IArith {
 	@Override
 	public <R> R accept(IArithVisitor<R> visitor) {
 		// TODO Auto-generated method stub
-		return null;
+		return visitor.visitConst(this);
 	}
 }
 
@@ -32,8 +33,9 @@ class UnaryFormula implements IArith {
 	@Override
 	public <R> R accept(IArithVisitor<R> visitor) {
 		// TODO Auto-generated method stub
-		return null;
+		return visitor.visitUnary(this);
 	}
+
 }
 
 class BinaryFormula implements IArith {
@@ -52,6 +54,9 @@ class BinaryFormula implements IArith {
 	@Override
 	public <R> R accept(IArithVisitor<R> visitor) {
 		// TODO Auto-generated method stub
-		return visitor.visit(this);
+		return visitor.visitBinary(this);
 	}
+	
 }
+
+	

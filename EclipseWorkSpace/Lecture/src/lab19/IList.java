@@ -50,8 +50,7 @@ class MtList<T> implements IList<T> {
 	@Override
 	public Void findUpdate(IPred<T> whichOne, IFunc<T, Void> whatToDo) {
 		return null;
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	} 
 }
 
@@ -83,6 +82,5 @@ class ConsList<T> implements IList<T> {
 			this.rest.findUpdate(whichOne, whatToDo);
 		}
 		return null;
-	}
-	
+	}	
 }
