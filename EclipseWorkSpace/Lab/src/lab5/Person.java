@@ -1,4 +1,5 @@
-package lab1;
+package lab5;
+
 
 public class Person {
 	String name;

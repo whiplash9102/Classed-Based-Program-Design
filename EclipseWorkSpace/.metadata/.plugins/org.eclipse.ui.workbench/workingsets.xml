@@ -6,5 +6,10 @@
 <item elementID="=Lecture" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Assignment" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
-<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1735779962607_2" label="Window Working Set" name="Aggregate for window 1735779962606"/>
+<workingSet editPageId="org.eclipse.mylyn.tasks.ui.workingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1739095800486_4" label="default" name="default">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Lab" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1735779962607_2" label="Window Working Set" name="Aggregate for window 1735779962606">
+<workingSet IMemento.internal.id="default"/>
+</workingSet>
 </workingSetManager>

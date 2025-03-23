@@ -1,4 +1,4 @@
-package lab1;
+package lab5;
 import tester.*;
 
 interface IEntertainment {
